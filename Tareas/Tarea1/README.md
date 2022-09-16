@@ -1,4 +1,6 @@
 # Almacenamiento de la información Tarea 1
+
+![Imagen de base de datos](https://lh3.googleusercontent.com/M9hK-MPBSTaw4t4HjaPrw3jg0Ibnq9G7qC3N5TP6uH7CCavx0OTZhcCYe-LeQdDD08zDkf1X30sqKZYdEaHJsUEcFdv0vlmXwEpHV4xOhfho068t0m_BbLif2ktgizSgSGtd2joPeQ=w2400)
 ### Hecho por Juan Manuel Morales Martín  
 ### 1º DAM Base de datos
 
@@ -9,7 +11,7 @@
 
 * [Introducción](#introducción)
 * [MySql](#mysql)
-* [SQLServer](#sqlserver)
+* [SQL Server](#sql-server)
 * [ORACLE](#oracle)
 * [Microsoft Access](#microsoft-access)
 * [PostgreSql](#postgresql)
@@ -39,18 +41,21 @@ Estos son los apartados que trataremos:
 
 Este gestor de base de datos en un sistema relacional, es decir, el usuario ve la base de datos en forma de conjunto de tablas. MySql soporta SQL, por lo tanto soporta dichas sentencias. Por otro lado este sistema soporta procedimientos almacenados, permitiendo al usuario agilizar los procesos de consultas, o agrupar sentencias.  
 
-Este sistema es multiplataforma, estando disponible en mas de 20 plataformas, algunas de ellas son Mac, Windows, Linux o Unix, siendo común que sea utilizado en Linux
+Este sistema es multiplataforma, estando disponible en mas de 20 plataformas, algunas de ellas son Mac, Windows, Linux o Unix, siendo común que sea utilizado en Linux. MySql se suele usar en desarrollo web sobre todo, 
 
 ***
 
-## SQLServer  
+## SQL Server  
+
+SQL Server es un gestor de base de datos que posee un sistema relacional, desarrollado por Microsoft. SQLServer soporta una implementación de SQL, llamada Transact-SQL (TSQL). En cuanto a los procedimientos almacenados, SQL Server si los soporta pudiendo realizar acciones desde la base de datos. Permite transacciones, pudiendo modificar, añadir o borrar los registros, entre otros casos.  
+
+SQL Server funciona actualmente en Windows y Linux. En cuanto a los sistemas donde se utiliza, este es recomendando para usar en empresas de todos los tamaños. 
 
 ***
 
 ## ORACLE
 
 ***
-
 ## Microsoft Access
 
 ***
@@ -82,3 +87,6 @@ Este sistema es multiplataforma, estando disponible en mas de 20 plataformas, al
 ## Bibliografía  
 ### Mysql
 * https://www.computerweekly.com/es/definicion/MySQL
+### SQL Server
+* https://guiadev.com/mysql-vs-sql-server/#Diferencias
+* https://es.wikipedia.org/wiki/Microsoft_SQL_Server
