@@ -6,18 +6,18 @@
 
 ### ÍNDICE
 
-* Introducción
-* MySql
-* SQLServer
-* ORACLE
-* Microsoft Access
-* PostgreSql
-* H2
-* FireBird
-* Apache Derby
-* INFORMIX
-* SQLite
-* Bibliografía
+* [Introducción](#introducción)
+* [MySql](#mysql)
+* [SQLServer](#sqlserver)
+* [ORACLE](#oracle)
+* [Microsoft Access](#microsoft-access)
+* [PostgreSql](#postgresql)
+* [H2](#h2)
+* [FireBird](#firebird)
+* [Apache Derby](#apache-derby)
+* [INFORMIX](#informix)
+* [SQLite](#sqlite)
+* [Bibliografía](#bibliografía)
 
 ***
 
@@ -36,5 +36,48 @@ Estos son los apartados que trataremos:
 
 ## MySql
 
-Este gestor de base de datos en un sistema relacional, es decir, el usuario ve la base de datos en forma de conjunto de tablas. MySql soporta SQL, por lo tanto soporta dichas sentencias. Por otro lado este sistema soporta procedimientos almacenados, permitiendo al usuario agilizar los procesos de consultas, por ejemplo.
+Este gestor de base de datos en un sistema relacional, es decir, el usuario ve la base de datos en forma de conjunto de tablas. MySql soporta SQL, por lo tanto soporta dichas sentencias. Por otro lado este sistema soporta procedimientos almacenados, permitiendo al usuario agilizar los procesos de consultas, o agrupar sentencias.  
 
+Este sistema es multiplataforma, estando disponible en mas de 20 plataformas, algunas de ellas son Mac, Windows, Linux o Unix, siendo común que sea utilizado en Linux
+
+***
+
+## SQLServer  
+
+***
+
+## ORACLE
+
+***
+
+## Microsoft Access
+
+***
+
+## PostgreSql
+
+***
+
+## H2
+
+***
+
+## FireBird
+
+***
+
+## Apache Derby
+
+***
+
+## INFORMIX
+
+***
+
+## SQLite
+
+***
+ 
+## Bibliografía  
+### Mysql
+* https://www.computerweekly.com/es/definicion/MySQL
