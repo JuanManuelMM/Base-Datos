@@ -12,7 +12,7 @@
 * [Introducción](#introducción)
 * [MySql](#mysql)
 * [SQL Server](#sql-server)
-* [ORACLE](#oracle)
+* [Oracle](#oracle)
 * [Microsoft Access](#microsoft-access)
 * [PostgreSql](#postgresql)
 * [H2](#h2)
@@ -53,10 +53,16 @@ SQL Server funciona actualmente en Windows y Linux. En cuanto a los sistemas don
 
 ***
 
-## ORACLE
+## Oracle
+
+Oracle es uno de los SGBD relacionales más reconocidos en el mundo, este soporta sentencias SQL y también utiliza una extensión de SQL llamada PL/SQL. Este SGBD también soporta procedimientos almacenados.  
+
+Oracle soporta transacciones, es un sistema multiplataforma y es mayormente utilizado en grandes empresas, capaces de gestionar gran cantidad de información.  
 
 ***
-## Microsoft Access
+## Microsoft Access  
+
+Este SGBD, debido a que su modelo está basado en un sistema de tablas, es relacional. Este utiliza SQL para trabajar y gestionar los datos, soportando entonces sentencias de este. 
 
 ***
 
@@ -90,3 +96,5 @@ SQL Server funciona actualmente en Windows y Linux. En cuanto a los sistemas don
 ### SQL Server
 * https://guiadev.com/mysql-vs-sql-server/#Diferencias
 * https://es.wikipedia.org/wiki/Microsoft_SQL_Server
+### Oracle
+* https://www.oracle.com/es/database/technologies/appdev/sql.html
