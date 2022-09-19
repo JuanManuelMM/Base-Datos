@@ -41,7 +41,7 @@ Estos son los apartados que trataremos:
 
 Este gestor de base de datos en un sistema relacional, es decir, el usuario ve la base de datos en forma de conjunto de tablas. MySql soporta SQL, por lo tanto soporta dichas sentencias. Por otro lado este sistema soporta procedimientos almacenados, permitiendo al usuario agilizar los procesos de consultas, o agrupar sentencias.  
 
-Este sistema es multiplataforma, estando disponible en mas de 20 plataformas, algunas de ellas son Mac, Windows, Linux o Unix, siendo común que sea utilizado en Linux. MySql se suele usar en desarrollo web sobre todo, 
+Este sistema es multiplataforma, estando disponible en mas de 20 plataformas, algunas de ellas son Mac, Windows, Linux o Unix, siendo común que sea utilizado en Linux. MySql se suele usar en desarrollo web sobre todo.
 
 ***
 
@@ -62,15 +62,19 @@ Oracle soporta transacciones, es un sistema multiplataforma y es mayormente util
 ***
 ## Microsoft Access  
 
-Este SGBD, debido a que su modelo está basado en un sistema de tablas, es relacional. Este utiliza SQL para trabajar y gestionar los datos, soportando entonces sentencias de este. 
+Este SGBD, debido a que su modelo está basado en un sistema de tablas, es relacional. Este utiliza SQL para trabajar y gestionar los datos, soportando entonces sentencias de este. Microsoft Access es capaz de soportar procedimientos almacenados gracias a la librería ADODB y transacciones. Por otro lado, Microsoft Access tan solo está para Windows, y se suele utilizar para cosas sencillas como seguimiento de pedidos, videojuegos, etc.
 
 ***
 
-## PostgreSql
+## PostgreSql  
+
+Es un SGBD relacional de alto nivel, esta soporta sentencias SQL. Los procedimientos almacenados de este SGBD se pueden escribir en diferentes lenguajes como pueden ser PL/pgSQL, PL/Perl, PL/Pythonv, etc. Permite transacciones, es multiplataforma y Open Source. Se utiliza, por ejemplo, para almacenamiento de datos, En servicios como Amazon Web Services Redshift, etc.
 
 ***
 
-## H2
+## H2  
+
+Al igual que los anteriores, este SGBD es relacional.
 
 ***
 
@@ -97,4 +101,11 @@ Este SGBD, debido a que su modelo está basado en un sistema de tablas, es relac
 * https://guiadev.com/mysql-vs-sql-server/#Diferencias
 * https://es.wikipedia.org/wiki/Microsoft_SQL_Server
 ### Oracle
-* https://www.oracle.com/es/database/technologies/appdev/sql.html
+* https://www.oracle.com/es/database/technologies/appdev/sql.html  
+### Microsoft Access
+* 
+
+### PostgreSql
+* https://e-mc2.net/blog/procedimientos-almacenados-y-plpgsql/
+* https://runebook.dev/es/docs/postgresql/tutorial-transactions
+* https://openwebinars.net/blog/que-es-postgresql/
