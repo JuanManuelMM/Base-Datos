@@ -74,8 +74,7 @@ Es un SGBD relacional de alto nivel, esta soporta sentencias SQL. Los procedimie
 
 ## H2  
 
-Al igual que los anteriores, este SGBD es relacional.
-
+Al igual que los anteriores, este SGBD es relacional, y a pesar de estar desarrollado en Java, este no representa inconveniente para lanzar sentencias SQL. Este permite procedimientos almacenados si se utiliza con la biblioteca de software jOOQ.
 ***
 
 ## FireBird
@@ -91,7 +90,7 @@ Al igual que los anteriores, este SGBD es relacional.
 ***
 
 ## SQLite
-
+No tiene transacciones
 ***
  
 ## Bibliografía  
@@ -108,4 +107,8 @@ Al igual que los anteriores, este SGBD es relacional.
 ### PostgreSql
 * https://e-mc2.net/blog/procedimientos-almacenados-y-plpgsql/
 * https://runebook.dev/es/docs/postgresql/tutorial-transactions
-* https://openwebinars.net/blog/que-es-postgresql/
+* https://openwebinars.net/blog/que-es-postgresql/  
+### H2
+* https://es.wikipedia.org/wiki/H2_(DBMS)
+* https://programmerclick.com/article/8931595604/
+* 
