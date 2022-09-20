@@ -18,7 +18,7 @@
 * [H2](#h2)
 * [FireBird](#firebird)
 * [Apache Derby](#apache-derby)
-* [INFORMIX](#informix)
+* [Informix](#informix)
 * [SQLite](#sqlite)
 * [Bibliografía](#bibliografía)
 
@@ -74,23 +74,29 @@ Es un SGBD relacional de alto nivel, esta soporta sentencias SQL. Los procedimie
 
 ## H2  
 
-Al igual que los anteriores, este SGBD es relacional, y a pesar de estar desarrollado en Java, este no representa inconveniente para lanzar sentencias SQL. Este permite procedimientos almacenados si se utiliza con la biblioteca de software jOOQ.
-***
+Al igual que los anteriores, este SGBD es relacional, y a pesar de estar desarrollado en Java, este no representa inconveniente para lanzar sentencias SQL. Este permite procedimientos almacenados si se utiliza con la biblioteca de software jOOQ. Toda manipulación de datos es transaccional, además es un sistema multiplataforma ya que se puede trabajar en el en diferentes sistemas operativos, y se suele utilizar en aplicaciones de java, o ejecutarse como cliente-servidor (El cliente pide cierta información, el servidor se la otorga). 
+
+*** 
 
 ## FireBird
 
+Este sistema es relacional, además de estar diseñado para ser de código abierto. Este se basa en las sentencias estandar de SQL, también cuenta con soporte para los procesos almacenados. A mayores, en FireBird se trabaja mayormente con las transacciones, siendo un aparte importante de este programa. Este SGBD es multiplataforma, estando presente en sistemas como Windows, Mac, Linux o Solaris, entre otros. Este es gratuito y fácil de configurar, por lo que es una buena opción para las empresas.
 ***
 
 ## Apache Derby
 
+Apache Derby es un sistema relacional, al estar presente de nuevo la estructura en tablas. Este permite sentencias de Java gracias a JDBC (Java Data Base Connectivity), pero también soporta las sentencias SQL. Entre sus características, este soporta los procedimientos almacenados y las transacciones, también es multiplataforma, ya que actualmente está operativo para Windows, Linux, OSX, etc. 
+
 ***
 
-## INFORMIX
+## Informix
+
+Este SGBD es relacional, además de ser uno de los sistemas más utilizados en el mundo, yendo desde las grandes empresas hasta las más nuevas, y abarcando diferentes sistemas operativos como Linux o UNIX. Soporta sentencias tanto de SQL, como NoSQL/JSON. Las funciones en este sistema se importan en procedimientos almacenados, por lo tanto los soporta, al igual que las transacciones.
 
 ***
 
 ## SQLite
-No tiene transacciones
+Esta herramienta de softawe libre, la cual soporta sentencias SQL y varios lenguajes de programación, está basado en un sistema relacional. Es capaz de implementar transacciones, pero no es capaz de soportar procedimientos almacenados. SQLite es multiplataforma, y se suele utilizar en aplicaciones desktop o móviles, en sitios lijeros como páginas estéticas, o en sistemas que aún no poseen muchos usuarios.
 ***
  
 ## Bibliografía  
@@ -101,8 +107,10 @@ No tiene transacciones
 * https://es.wikipedia.org/wiki/Microsoft_SQL_Server
 ### Oracle
 * https://www.oracle.com/es/database/technologies/appdev/sql.html  
+
 ### Microsoft Access
-* 
+* https://www.inesem.es/revistadigital/informatica-y-tics/procedimientos-almacenados-de-sql-server-desde-microsoft-access/
+* https://es.wikipedia.org/wiki/Microsoft_Access
 
 ### PostgreSql
 * https://e-mc2.net/blog/procedimientos-almacenados-y-plpgsql/
@@ -111,4 +119,27 @@ No tiene transacciones
 ### H2
 * https://es.wikipedia.org/wiki/H2_(DBMS)
 * https://programmerclick.com/article/8931595604/
-* 
+* https://es.frwiki.wiki/wiki/H2_(base_de_donn%C3%A9es)  
+
+### FireBird  
+* https://www.arsys.es/blog/firebird-bbdd
+* https://firebirdsql.org/manual/es/qsg15-es-firebird-sql.html
+* https://firebird21.wordpress.com/2013/09/07/entendiendo-a-las-transacciones/  
+
+### Apache Derby
+* https://es.wikipedia.org/wiki/Apache_Derby
+* https://programmerclick.com/article/4622285186/
+* https://www.palentino.es/blog/comparador/1/21/apache-derby/  
+
+### Informix  
+* https://www.ibm.com/es-es/products/informix  
+* https://www.ibm.com/docs/es/cognos-analytics/11.0.0?topic=SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ug_fm.doc/c_stored_procedure_query_subjects.html
+* https://www.ibm.com/cl-es/products/informix/editions  
+
+### SQLite  
+* https://sg.com.mx/revista/17/sqlite-la-base-datos-embebida
+* https://www.iteramos.com/pregunta/13937/creacion-de-un-procedimiento-almacenado-y-sqlite
+* https://learn.microsoft.com/es-es/dotnet/standard/data/sqlite/transactions
+* https://www.hostgator.mx/blog/sqlite-que-es-y-diferencias-con-mysql/
+
+Parte de la información también fue obtenida gracias al PDF publicado en CAMPUS
