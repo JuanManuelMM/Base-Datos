@@ -1,1 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2022-09-22T17:48:33.180Z" agent="5.0 (X11)" version="20.3.3" etag="GMp9Y0aGyPHTFvDiHB_E" type="github"><diagram id="e-o6jon2sMzt2f6sX4oO">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-09-22T17:55:55.925Z" agent="5.0 (X11)" etag="dLu_sHx5CldRFE9Vc8Ee" version="20.3.3" type="github">
+  <diagram id="e-o6jon2sMzt2f6sX4oO" name="Página-1">
+    <mxGraphModel dx="984" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--1" value="Profesor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--2" value="Alumno" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--4" value="Dar" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="340" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--6" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="EU2MA8LSs2VXo3EuWL2--1" target="EU2MA8LSs2VXo3EuWL2--4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="380" as="sourcePoint" />
+            <mxPoint x="290" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--8" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="EU2MA8LSs2VXo3EuWL2--2" target="EU2MA8LSs2VXo3EuWL2--4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="380" as="sourcePoint" />
+            <mxPoint x="290" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--9" value="1:1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="350" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--10" value="1:n" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="560" y="350" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EU2MA8LSs2VXo3EuWL2--11" value="1:n" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="310" width="40" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
