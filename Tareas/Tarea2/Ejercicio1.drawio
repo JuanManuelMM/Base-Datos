@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-25T21:21:26.852Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="RI0sfNo5LSB1i4GeWppQ" version="20.3.6" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2022-09-25T21:25:21.781Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="jqmEFZmbqrj7EKMhsIDL" version="20.3.6" type="github" pages="9">
   <diagram id="e-o6jon2sMzt2f6sX4oO" name="Ej1">
     <mxGraphModel dx="1546" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -351,7 +351,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Ej7" id="P_pS3XCKLhpUemYlVn08">
-    <mxGraphModel dx="1314" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1095" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="f4Tf0rKcwHx4MfwZ7XMH-0" />
         <mxCell id="f4Tf0rKcwHx4MfwZ7XMH-1" parent="f4Tf0rKcwHx4MfwZ7XMH-0" />
@@ -490,14 +490,14 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Ej8" id="60A9pa1k0UGE3xmZHl3X">
-    <mxGraphModel dx="1383" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="973" dy="387" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="RUI6c_5gWehHwsfPvOhA-0" />
         <mxCell id="RUI6c_5gWehHwsfPvOhA-1" parent="RUI6c_5gWehHwsfPvOhA-0" />
         <mxCell id="RUI6c_5gWehHwsfPvOhA-2" value="Empleado" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="RUI6c_5gWehHwsfPvOhA-1">
           <mxGeometry x="220" y="355" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RUI6c_5gWehHwsfPvOhA-3" value="ser_padre" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="RUI6c_5gWehHwsfPvOhA-1">
+        <mxCell id="RUI6c_5gWehHwsfPvOhA-3" value="Tener" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="RUI6c_5gWehHwsfPvOhA-1">
           <mxGeometry x="380" y="355" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RUI6c_5gWehHwsfPvOhA-4" value="Hijo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="RUI6c_5gWehHwsfPvOhA-1">
