@@ -1,1 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2022-09-28T14:37:22.486Z" agent="5.0 (X11)" version="20.3.6" etag="93CTCEpSAuHUZhU_7i2v" type="github"><diagram id="uUVrF_PoB3ZEODSfmZv5">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-09-28T14:41:37.642Z" agent="5.0 (X11)" etag="Xa2v7dc3E5OcNeDJGRNi" version="20.3.6" type="github">
+  <diagram id="uUVrF_PoB3ZEODSfmZv5" name="Ej1">
+    <mxGraphModel dx="876" dy="963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_2Q2QTlOaPSy35gwyfEW-1" value="Proveedor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_2Q2QTlOaPSy35gwyfEW-2" value="Clientes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_2Q2QTlOaPSy35gwyfEW-3" value="&lt;div&gt;Productos&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_2Q2QTlOaPSy35gwyfEW-4" value="Ventas" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
