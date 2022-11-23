@@ -95,5 +95,13 @@ Se pide:
 
 **1: Indicar claves candidatas**  
 
+- NSS
 
+**Comprobar si se cumple la 1º Forma Normal**  
+
+ No se cumple ya que hay celdas en las tablas que contienen más de un elemento, es decir que son multievaluadas.  
+ 
+ **Normalizar si no se cumple el apartado 2**  
+ 
+  
 
