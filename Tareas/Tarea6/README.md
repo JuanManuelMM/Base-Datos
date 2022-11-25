@@ -103,5 +103,49 @@ Se pide:
  
  **Normalizar si no se cumple el apartado 2**  
  
-  
+ **Empleado**
+  |NSS|Nombre|Puesto| Salario|
+  |---|---|---|---|
+  |111|Pepe|Jefe Area|3000|
+  |222|Josu|Admitivo|1500|
+  |333|Miren|Admitiva|1500|
+
+**Emails**
+
+|NSS|Emails|
+|---|---|
+|111|josep@ecn.es|
+|111|jefez@gmail.com|
+|222|jsanchez@ecn.es|
+|333|mlopez@ecn.es|
+|333|miren@gmail.com|
+
+**Comprobar si se cumple la 2º Forma Normal**  
+
+No se cumple ya que no todos los atributos dependen funcinalmente de la clave primaria.
+
+**Normalizar si no se cumple el apartado 4**  
+
+**Empleado**
+ |NSS|Nombre|
+ |---|---|
+ |111|Pepe|
+ |222|Josu|
+ |333|Miren|  
+ 
+**Trabajo**
+|NSS|Puesto|Salario|
+|---|---|---|
+|111|Jefe Area|3000|
+|222|Admitivo|1500|
+|333|Admitiva|1500|
+
+**Emails**
+|NSS|Emails|
+|---|---|
+|111|josep@ecn.es|
+|111|jefez@gmail.com|
+|222|jsanchez@ecn.es|
+|333|mlopez@ecn.es|
+|333|miren@gmail.com|
 
