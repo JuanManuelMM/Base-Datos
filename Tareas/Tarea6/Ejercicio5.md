@@ -30,38 +30,69 @@ La 1º Forma normal no se cumple ya que los atributos no son atómicos.
 
 **Normalizar si no se cumple el apartado 2**  
 
-Se repite los elementos de autor, así que los sacamos fuera. Además, el campo "NombreLector" se puede dividir en "nombre" y "apellido".  
+Se repite los elementos de autor, así que los sacamos fuera. Además, el campo "NombreLector" se puede dividir en "nombre" y "apellido", al igual que el campo "Autor".  
 
-**Autor**
-| CodLibro |  Autor | 
-|-----|-----|
-| 1001 |   Murray Spiegel  | 
- |1004 |  E. Petroustsos |  
- | 1005 |  Murray Spiegel |  
- | 1006  |  Nancy Greenberg |
- |1006| Priya Nathan|
-| 1007 |  Ramalho |  
+**Autor**  
 
-**Lector**
-
-|CodLibro|Nombre|Apellido|
-|---|---|---|
-|1001|Juan|Pérez Gómez|
-|1004|Ana|Ríos Terán|
-|1005|René|Roca|
-|1006|Luis| García Roque|
-|1007|Juan|Pérez Gómez|
+| CodLibro |  Nombre | Apellido |
+|-----|-----| -----|
+| 1001 |   Murray |Spiegel  | 
+ |1004 |  E. | Petroustsos |  
+ | 1005 |  Murray| Spiegel |  
+ | 1006  |  Nancy |Greenberg |
+ |1006| Priya |Nathan|
+| 1007 |  Ramalho ||  
 
 **Libro**  
 
-| CodLibro | Titulo|Editorial |  FechaDev | 
-|-----|-----|-----|-----| 
-| 1001 | Variable compleja  | McGraw Hill |15/04/2022 |
- |1004 | Visual Basic 5 | Anaya | 17/04/2022  | 
- | 1005 | Estadística | McGraw Hill | 16/04/2022  | 
- | 1006  | Oracle University | Oracle Corp. | 20/04/2022 | 
-| 1007 | Clipper 5.01 | Ramalho | 18/04/2022 | 
+| CodLibro |Nombre|Apellidos| Titulo|Editorial |  FechaDev | 
+|-----|-----|-----|-----|-----|-----| 
+| 1001 |Juan|Pérez Gómez| Variable compleja  | McGraw Hill |15/04/2022 |
+ |1004 |Ana|Ríos Terán|Visual Basic 5 | Anaya | 17/04/2022  | 
+ | 1005 |René|Roca| Estadística | McGraw Hill | 16/04/2022  | 
+ | 1006  |Luis|García Roque| Oracle University | Oracle Corp. | 20/04/2022 | 
+| 1007 |Juan|Pérez Gómez| Clipper 5.01 | Ramalho | 18/04/2022 | 
 
 **Comprobar si se cumple la 2ª Forma Normal**  
+No se cumple ya que no todos os atributos que no forman parte de la clave principal tienen dependencia funcional completa de ella  
+
+**Normalizar en caso de que no se cumpla el apartado 4**  
+
+**Autor**  
+
+| CodLibro |  Nombre | Apellido |
+|-----|-----| -----|
+| 1001 |   Murray |Spiegel  | 
+ |1004 |  E. | Petroustsos |  
+ | 1005 |  Murray| Spiegel |  
+ | 1006  |  Nancy |Greenberg |
+ |1006| Priya |Nathan|
+| 1007 |  Ramalho ||  
+
+**Lector**
+
+|CodLibro|Nombre|Apellido|FechaDev | 
+|---|---|---|-----|
+|1001|Juan|Pérez Gómez|15/04/2022 |
+|1004|Ana|Ríos Terán|17/04/2022  |
+|1005|René|Roca|16/04/2022  |
+|1006|Luis| García Roque|20/04/2022 |
+|1007|Juan|Pérez Gómez| 18/04/2022 |
+
+**Libro**  
+
+| CodLibro | Titulo| Editorial |
+|-----|-----|-----|
+| 1001 |Variable compleja  | McGraw Hill |
+ |1004 |Visual Basic 5 | Anaya |  
+ | 1005 | Estadística | McGraw Hill |  
+ | 1006  | Oracle University | Oracle Corp. |  
+| 1007 |Clipper 5.01 | Ramalho |   
+
+**Comprobar si se cumple la 3º Forma Normal**  
+
+
+
+
 
 
