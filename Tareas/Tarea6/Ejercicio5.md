@@ -28,4 +28,40 @@ Se pide:
 La 1º Forma normal no se cumple ya que los atributos no son atómicos.  
 
 
-**Normalizar si n
+**Normalizar si no se cumple el apartado 2**  
+
+Se repite los elementos de autor, así que los sacamos fuera. Además, el campo "NombreLector" se puede dividir en "nombre" y "apellido".  
+
+**Autor**
+| CodLibro |  Autor | 
+|-----|-----|
+| 1001 |   Murray Spiegel  | 
+ |1004 |  E. Petroustsos |  
+ | 1005 |  Murray Spiegel |  
+ | 1006  |  Nancy Greenberg |
+ |1006| Priya Nathan|
+| 1007 |  Ramalho |  
+
+**Lector**
+
+|CodLibro|Nombre|Apellido|
+|---|---|---|
+|1001|Juan|Pérez Gómez|
+|1004|Ana|Ríos Terán|
+|1005|René|Roca|
+|1006|Luis| García Roque|
+|1007|Juan|Pérez Gómez|
+
+**Libro**  
+
+| CodLibro | Titulo|Editorial |  FechaDev | 
+|-----|-----|-----|-----| 
+| 1001 | Variable compleja  | McGraw Hill |15/04/2022 |
+ |1004 | Visual Basic 5 | Anaya | 17/04/2022  | 
+ | 1005 | Estadística | McGraw Hill | 16/04/2022  | 
+ | 1006  | Oracle University | Oracle Corp. | 20/04/2022 | 
+| 1007 | Clipper 5.01 | Ramalho | 18/04/2022 | 
+
+**Comprobar si se cumple la 2ª Forma Normal**  
+
+
