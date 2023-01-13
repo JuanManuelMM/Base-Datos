@@ -174,6 +174,7 @@ nombre in ('Windows', 'Access');
   SELECT nombre from fabricante 
 order by nombre asc;
   ```
+  
   - 25. Genera un listado de empresas por orden alfabético descendente. 
   - 26. Obtén un listado de programas por orden de versión.
   - 27. Genera un listado de los programas que desarrolla Oracle. 
