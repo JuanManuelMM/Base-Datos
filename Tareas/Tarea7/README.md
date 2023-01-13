@@ -81,7 +81,7 @@ select * from comercio;
 ```
   - 5. Genera una lista de las ciudades con establecimientos donde se venden programas, sin que aparezcan valores duplicados (utiliza DISTINCT).
 ```sql
-select * from comercio;
+select distinc* from comercio;
 ```
   - 6. Obtén una lista con los nombres de programas, sin que aparezcan valores duplicados (utiliza DISTINCT).
 ```sql
@@ -127,13 +127,53 @@ SELECT codigo from programa WHERE
 nombre in ('Windows', 'Access');
 ```
   - 17. Obtén un listado que incluya los nombres de los clientes de edades comprendidas entre 10 y 25 y de los mayores de 50 años. Da una solución con BETWEEN y otra sin BETWEEN.
-  - 18. Saca un listado con los comercios de Sevilla y Madrid. No se admiten valores duplicados. 
-  - 19. ¿Qué clientes terminan su nombre en la letra “o”? 
-  - 20. ¿Qué clientes terminan su nombre en la letra “o” y, además, son mayores de 30 años? 
-  - 21. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A o por una W. 
-  - 22. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A y termine por una S. 
+  ```sql
+  -- Este es usando el between
+  SELECT nombre FROM cliente 
+  WHERE (edad BETWEEN 10 and 25) or (edad>50);
+  
+  -- este es sin el between
+  SELECT nombre FROM cliente 
+  WHERE (edad>= 10 and  edad <=25) or (edad>50);
+  ```
+  - 18. Saca un listado con los comercios de Sevilla y Madrid. No se admiten valores duplicados.
+  ```sql
+  SELECT DISTINCT nombre from comercio where ciudad='Sevilla' or ciudad='Madrid'
+  ```
+  - 19. ¿Qué clientes terminan su nombre en la letra “o”?
+  ```sql
+  SELECT * from cliente 
+	WHERE nombre REGEXP 'o$';
+  ```
+  
+  - 20. ¿Qué clientes terminan su nombre en la letra “o” y, además, son mayores de 30 años
+  
+  ```sql
+  SELECT * from cliente 
+	WHERE nombre REGEXP 'o$' and edad >30;
+  ```
+  
+  - 21. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A o por una W.
+  ```sql
+  SELECT * from programa 
+	WHERE version REGEXP 'i$' or nombre REGEXP'^A' or nombre REGEXP '^W';
+  ```
+  
+  - 22. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A y termine por una S.
+  ```sql
+  SELECT * from programa 
+	WHERE version REGEXP 'i$' or nombre REGEXP'^A' and nombre REGEXP 's$';
+  ```
   - 23. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, y cuyo nombre no comience por una A. 
-  - 24. Obtén una lista de empresas por orden alfabético ascendente. 
+  ```sql
+  SELECT * from programa 
+	WHERE version REGEXP 'i$' and nombre not REGEXP'^A';
+  ```
+  - 24. Obtén una lista de empresas por orden alfabético ascendente.
+  ```sql
+  SELECT nombre from fabricante 
+order by nombre asc;
+  ```
   - 25. Genera un listado de empresas por orden alfabético descendente. 
   - 26. Obtén un listado de programas por orden de versión.
   - 27. Genera un listado de los programas que desarrolla Oracle. 
