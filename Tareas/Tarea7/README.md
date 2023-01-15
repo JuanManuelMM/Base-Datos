@@ -172,12 +172,23 @@ nombre in ('Windows', 'Access');
   - 24. Obtén una lista de empresas por orden alfabético ascendente.
   ```sql
   SELECT nombre from fabricante 
-order by nombre asc;
+  order by nombre asc;
   ```
   
-  - 25. Genera un listado de empresas por orden alfabético descendente. 
+  - 25. Genera un listado de empresas por orden alfabético descendente.
+  ```sql
+  select * from fabricante 
+  order by nombre DESC
+  ```
+  
   - 26. Obtén un listado de programas por orden de versión.
-  - 27. Genera un listado de los programas que desarrolla Oracle. 
+  ```sql
+  select * from programa
+  order by version
+  ```
+  
+  - 27. Genera un listado de los programas que desarrolla Oracle.
+  
   - 28. ¿Qué comercios distribuyen Windows? 
   - 29. Genera un listado de los programas y cantidades que se han distribuido a El Corte Inglés de Madrid. 
   - 30. ¿Qué fabricante ha desarrollado Freddy Hardest? 
