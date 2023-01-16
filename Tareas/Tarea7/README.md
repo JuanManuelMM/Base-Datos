@@ -240,12 +240,29 @@ nombre in ('Windows', 'Access');
   
   - 35. ¿En qué localidades se han vendido productos que se han registrado por Internet?
   ```sql
-  
+  select comercio.ciudad from programa, comercio, registra 
+  WHERE programa.codigo=registra.codigo 
+  and comercio.cif=registra.cif 
+  and registra.medio='Tarjeta postal'
   ```
   
   - 36. Obtén un listado de los nombres de las personas que se han registrado por Internet, junto al nombre de los programas para los que ha efectuado el registro. 
+  ```sql
+  select cliente.nombre,programa.nombre from cliente,registra, programa 
+  WHERE registra.codigo=programa.codigo
+  and cliente.dni=registra.dni 
+  and registra.medio='Internet'
+  ```
   - 37. Genera un listado en el que aparezca cada cliente junto al programa que ha registrado, el medio con el que lo ha hecho y el comercio en el que lo ha adquirido.
-  - 38. Genera un listado con las ciudades en las que se pueden obtener los productos de Oracle. 
+  ```sql
+  select cliente.nombre,programa.nombre,registra.medio,comercio.nombre from cliente,registra, programa, comercio
+  WHERE registra.codigo=programa.codigo
+  and cliente.dni=registra.dni 
+  and comercio.cif=registra.cif
+  ```
+  
+  - 38. Genera un listado con las ciudades en las que se pueden obtener los productos de Oracle.
+   
   - 39. Obtén el nombre de los usuarios que han registrado Access XP. 
   - 40. Nombre de aquellos fabricantes cuyo país es el mismo que ʻOracleʼ. (Subconsulta). 
   - 41. Nombre de aquellos clientes que tienen la misma edad que Pepe Pérez. (Subconsulta). 
