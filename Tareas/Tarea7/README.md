@@ -81,7 +81,7 @@ select * from comercio;
 ```
   - 5. Genera una lista de las ciudades con establecimientos donde se venden programas, sin que aparezcan valores duplicados (utiliza DISTINCT).
 ```sql
-select distinc* from comercio;
+select distinc ciudad from comercio;
 ```
   - 6. Obtén una lista con los nombres de programas, sin que aparezcan valores duplicados (utiliza DISTINCT).
 ```sql
@@ -188,15 +188,61 @@ nombre in ('Windows', 'Access');
   ```
   
   - 27. Genera un listado de los programas que desarrolla Oracle.
-  
-  - 28. ¿Qué comercios distribuyen Windows? 
-  - 29. Genera un listado de los programas y cantidades que se han distribuido a El Corte Inglés de Madrid. 
-  - 30. ¿Qué fabricante ha desarrollado Freddy Hardest? 
+  ```sql
+  select * from programa join
+  fabricante on fabricante.id_fab=programa.codigo where programa.nombre='Oracle'
+  ```
+  - 28. ¿Qué comercios distribuyen Windows?
+  ```sql
+  select * from comercio, distribuye, programa WHERE
+  comercio.cif=distribuye.cif and distribuye.codigo=programa.codigo and programa.nombre='Windows'
+  ```
+  - 29. Genera un listado de los programas y cantidades que se han distribuido a El Corte Inglés de Madrid.
+  ```sql
+  select distribuye.cantidad from programa,distribuye,comercio 
+  where programa.codigo=distribuye.codigo 
+  and distribuye.cif=comercio.cif
+  and comercio.nombre='El Corte Inglés' 
+  and comercio.ciudad='Madrid' 
+  ```
+  - 30. ¿Qué fabricante ha desarrollado Freddy Hardest?
+  ```sql
+  select fabricante.nombre from fabricante, desarrolla, programa 
+  where fabricante.id_fab= desarrolla.id_fab 
+  and programa.codigo=desarrolla.codigo 
+  and programa.nombre='Freddy Hardest' 
+  ```
   - 31. Selecciona el nombre de los programas que se registran por Internet. 
-  - 32. ¿Qué medios ha utilizado para registrarse Pepe Pérez? 
+  ```sql
+  select programa.nombre from programa, registra WHERE
+  programa.codigo = registra.codigo and registra.medio='Internet'
+  ```
+  - 32. ¿Qué medios ha utilizado para registrarse Pepe Pérez?
+  ```sql
+  select registra.medio from programa, registra, cliente WHERE
+  programa.codigo=registra.codigo 
+  and cliente.dni=registra.dni 
+  and cliente.nombre='Pepe Pérez'
+  ```
   - 33. ¿Qué usuarios han optado por Internet como medio de registro? 
+  ```sql
+   select cliente.nombre from programa, registra, cliente WHERE
+   programa.codigo=registra.codigo 
+   and cliente.dni=registra.dni 
+   and registra.medio='Internet'
+  ```
   - 34. ¿Qué programas han recibido registros por tarjeta postal? 
-  - 35. ¿En qué localidades se han vendido productos que se han registrado por Internet? 
+  ```sql
+  select * from programa, registra WHERE
+  programa.codigo=registra.codigo 
+  and registra.medio='Tarjeta postal'
+  ```
+  
+  - 35. ¿En qué localidades se han vendido productos que se han registrado por Internet?
+  ```sql
+  
+  ```
+  
   - 36. Obtén un listado de los nombres de las personas que se han registrado por Internet, junto al nombre de los programas para los que ha efectuado el registro. 
   - 37. Genera un listado en el que aparezca cada cliente junto al programa que ha registrado, el medio con el que lo ha hecho y el comercio en el que lo ha adquirido.
   - 38. Genera un listado con las ciudades en las que se pueden obtener los productos de Oracle. 
