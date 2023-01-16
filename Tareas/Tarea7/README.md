@@ -110,7 +110,7 @@ where pais not in ('España');
 ```
   - 13. Obtén un listado con los códigos de las distintas versiones de Windows.
 ```sql
-select version from programa where nombre='Windows';
+select codigo from programa where nombre='Windows';
 ```
   - 14. ¿En qué ciudades comercializa programas El Corte Inglés?
 ```sql
@@ -130,11 +130,11 @@ nombre in ('Windows', 'Access');
   ```sql
   -- Este es usando el between
   SELECT nombre FROM cliente 
-  WHERE (edad BETWEEN 10 and 25) or (edad>50);
+  WHERE ((edad BETWEEN 10 and 25) or (edad>50));
   
   -- este es sin el between
   SELECT nombre FROM cliente 
-  WHERE (edad>= 10 and  edad <=25) or (edad>50);
+  WHERE ((edad>= 10 and  edad <=25) or (edad>50));
   ```
   - 18. Saca un listado con los comercios de Sevilla y Madrid. No se admiten valores duplicados.
   ```sql
