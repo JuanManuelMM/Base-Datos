@@ -189,8 +189,9 @@ nombre in ('Windows', 'Access');
   
   - 27. Genera un listado de los programas que desarrolla Oracle.
   ```sql
-  select * from programa join
-  fabricante on fabricante.id_fab=programa.codigo where programa.nombre='Oracle'
+  select * from programa, desarrolla, fabricante WHERE
+  programa.codigo=desarrolla.codigo and desarrolla.id_fab=fabricante.id_fab
+  and fabricante.nombre='Oracle'
   ```
   - 28. ¿Qué comercios distribuyen Windows?
   ```sql
