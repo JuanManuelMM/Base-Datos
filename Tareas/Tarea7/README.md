@@ -143,56 +143,57 @@ nombre in ('Windows', 'Access');
   - 19. ¿Qué clientes terminan su nombre en la letra “o”?
   ```sql
   SELECT * from cliente 
-	WHERE nombre REGEXP 'o$';
+	WHERE nombre like '%o %';
   ```
   
   - 20. ¿Qué clientes terminan su nombre en la letra “o” y, además, son mayores de 30 años
   
   ```sql
   SELECT * from cliente 
-	WHERE nombre REGEXP 'o$' and edad >30;
+	WHERE nombre like '%o %' and edad >30;
   ```
   
   - 21. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A o por una W.
   ```sql
   SELECT * from programa 
-	WHERE version REGEXP 'i$' or nombre REGEXP'^A' or nombre REGEXP '^W';
+	WHERE version REGEXP 'i$' or nombre REGEXP'^A|^W';
   ```
   
   - 22. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A y termine por una S.
   ```sql
   SELECT * from programa 
-	WHERE version REGEXP 'i$' or nombre REGEXP'^A' and nombre REGEXP 's$';
+	WHERE version REGEXP 'i$' or nombre REGEXP'^A.*s$';
   ```
   - 23. Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, y cuyo nombre no comience por una A. 
   ```sql
-  SELECT * from programa 
+  SELECT nombre from programa 
 	WHERE version REGEXP 'i$' and nombre not REGEXP'^A';
   ```
   - 24. Obtén una lista de empresas por orden alfabético ascendente.
   ```sql
-  SELECT nombre from fabricante 
+  SELECT nombre from comercio 
   order by nombre asc;
   ```
   
   - 25. Genera un listado de empresas por orden alfabético descendente.
   ```sql
-  select * from fabricante 
+  select nombre from comercio 
   order by nombre DESC
   ```
   
   - 26. Obtén un listado de programas por orden de versión.
   ```sql
-  select * from programa
-  order by version
+  select nombre from programa
+  order by version asc
   ```
   
   - 27. Genera un listado de los programas que desarrolla Oracle.
   ```sql
-  select * from programa, desarrolla, fabricante WHERE
+  select nombre from programa, desarrolla, fabricante WHERE
   programa.codigo=desarrolla.codigo and desarrolla.id_fab=fabricante.id_fab
   and fabricante.nombre='Oracle'
   ```
+  
   - 28. ¿Qué comercios distribuyen Windows?
   ```sql
   select * from comercio, distribuye, programa WHERE
