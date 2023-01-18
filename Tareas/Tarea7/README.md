@@ -196,12 +196,12 @@ nombre in ('Windows', 'Access');
   
   - 28. ¿Qué comercios distribuyen Windows?
   ```sql
-  select * from comercio, distribuye, programa WHERE
+  select comercio.nombre from comercio, distribuye, programa WHERE
   comercio.cif=distribuye.cif and distribuye.codigo=programa.codigo and programa.nombre='Windows'
   ```
   - 29. Genera un listado de los programas y cantidades que se han distribuido a El Corte Inglés de Madrid.
   ```sql
-  select distribuye.cantidad from programa,distribuye,comercio 
+  select programa.nombre, distribuye.cantidad from programa,distribuye,comercio 
   where programa.codigo=distribuye.codigo 
   and distribuye.cif=comercio.cif
   and comercio.nombre='El Corte Inglés' 
@@ -210,42 +210,39 @@ nombre in ('Windows', 'Access');
   - 30. ¿Qué fabricante ha desarrollado Freddy Hardest?
   ```sql
   select fabricante.nombre from fabricante, desarrolla, programa 
-  where fabricante.id_fab= desarrolla.id_fab 
+  where fabricante.id_fab=desarrolla.id_fab 
   and programa.codigo=desarrolla.codigo 
   and programa.nombre='Freddy Hardest' 
   ```
   - 31. Selecciona el nombre de los programas que se registran por Internet. 
   ```sql
   select programa.nombre from programa, registra WHERE
-  programa.codigo = registra.codigo and registra.medio='Internet'
+  programa.codigo=registra.codigo and registra.medio='Internet'
   ```
   - 32. ¿Qué medios ha utilizado para registrarse Pepe Pérez?
   ```sql
-  select registra.medio from programa, registra, cliente WHERE
-  programa.codigo=registra.codigo 
-  and cliente.dni=registra.dni 
+  select registra.medio from registra, cliente 
+  WHERE cliente.dni=registra.dni 
   and cliente.nombre='Pepe Pérez'
   ```
   - 33. ¿Qué usuarios han optado por Internet como medio de registro? 
   ```sql
-   select cliente.nombre from programa, registra, cliente WHERE
-   programa.codigo=registra.codigo 
-   and cliente.dni=registra.dni 
+   select cliente.nombre from registra, cliente WHERE
+   cliente.dni=registra.dni 
    and registra.medio='Internet'
   ```
   - 34. ¿Qué programas han recibido registros por tarjeta postal? 
   ```sql
-  select * from programa, registra WHERE
-  programa.codigo=registra.codigo 
-  and registra.medio='Tarjeta postal'
+  select p.nombre from programa as p, registra as r WHERE
+  p.codigo=r.codigo 
+  and r.medio='Tarjeta postal'
   ```
   
   - 35. ¿En qué localidades se han vendido productos que se han registrado por Internet?
   ```sql
-  select comercio.ciudad from programa, comercio, registra 
-  WHERE programa.codigo=registra.codigo 
-  and comercio.cif=registra.cif 
-  and registra.medio='Tarjeta postal'
+  select c.* from comercio as c, registra as r
+  where c.cif=r.cif 
+  and r.medio='Tarjeta postal'
   ```
   
   - 36. Obtén un listado de los nombres de las personas que se han registrado por Internet, junto al nombre de los programas para los que ha efectuado el registro. 
@@ -268,7 +265,10 @@ nombre in ('Windows', 'Access');
   - 39. Obtén el nombre de los usuarios que han registrado Access XP. 
   - 40. Nombre de aquellos fabricantes cuyo país es el mismo que ʻOracleʼ. (Subconsulta). 
   - 41. Nombre de aquellos clientes que tienen la misma edad que Pepe Pérez. (Subconsulta). 
-  - 42. Genera un listado con los comercios que tienen su sede en la misma ciudad que tiene el comercio ʻFNACʼ. (Subconsulta). 
+  - 42. Genera un listado con los comercios que tienen su sede en la misma ciudad que tiene el comercio ʻFNACʼ. (Subconsulta).
+  ```sql
+  
+  ```
   - 43. Nombre de aquellos clientes que han registrado un producto de la misma forma que el cliente ʻPepe Pérezʼ. (Subconsulta). 
   - 44. Obtener el número de programas que hay en la tabla programas. 46 Calcula el número de clientes cuya edad es mayor de 40 años. 
   - 45. Calcula el número de productos que ha vendido el establecimiento cuyo CIF es 1. 
