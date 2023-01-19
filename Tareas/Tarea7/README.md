@@ -261,8 +261,24 @@ nombre in ('Windows', 'Access');
   ```
   
   - 38. Genera un listado con las ciudades en las que se pueden obtener los productos de Oracle.
+  ```sql
+  SELECT fabricante.nombre, programa.nombre, comercio.ciudad from comercio, programa, distribuye, desarrolla, fabricante
+where comercio.cif=distribuye.cif 
+and programa.codigo=distribuye.codigo
+and desarrolla.codigo=programa.codigo
+and fabricante.id_fab=desarrolla.id_fab
+and fabricante.nombre='Oracle' 
+```
+  
    
-  - 39. Obtén el nombre de los usuarios que han registrado Access XP. 
+  - 39. Obtén el nombre de los usuarios que han registrado Access XP.
+  ```sql
+  select cliente.nombre, programa.nombre from cliente, registra, programa 
+WHERE cliente.dni=registra.dni
+and registra.codigo=programa.codigo
+and programa.nombre='Access'
+and programa.version like 'XP%'
+```
   - 40. Nombre de aquellos fabricantes cuyo país es el mismo que ʻOracleʼ. (Subconsulta). 
   - 41. Nombre de aquellos clientes que tienen la misma edad que Pepe Pérez. (Subconsulta). 
   - 42. Genera un listado con los comercios que tienen su sede en la misma ciudad que tiene el comercio ʻFNACʼ. (Subconsulta).
