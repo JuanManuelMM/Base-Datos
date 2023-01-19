@@ -280,21 +280,74 @@ and programa.nombre='Access'
 and programa.version like 'XP%'
 ```
   - 40. Nombre de aquellos fabricantes cuyo país es el mismo que ʻOracleʼ. (Subconsulta). 
-  - 41. Nombre de aquellos clientes que tienen la misma edad que Pepe Pérez. (Subconsulta). 
-  - 42. Genera un listado con los comercios que tienen su sede en la misma ciudad que tiene el comercio ʻFNACʼ. (Subconsulta).
+```sql
+SELECT nombre FROM fabricante WHERE pais = (SELECT pais FROM fabricante WHERE nombre = 'Oracle');
+```
+
+  - 41. Nombre de aquellos clientes que tienen la misma edad que Pepe Pérez. (Subconsulta).
   ```sql
-  
+  SELECT nombre FROM cliente WHERE edad = (SELECT edad FROM cliente WHERE nombre = 'Pepe Pérez');
   ```
-  - 43. Nombre de aquellos clientes que han registrado un producto de la misma forma que el cliente ʻPepe Pérezʼ. (Subconsulta). 
-  - 44. Obtener el número de programas que hay en la tabla programas. 46 Calcula el número de clientes cuya edad es mayor de 40 años. 
-  - 45. Calcula el número de productos que ha vendido el establecimiento cuyo CIF es 1. 
-  - 46. Calcula la media de programas que se venden cuyo código es 7.  
-  - 47. Calcula la mínima cantidad de programas de código 7 que se ha vendido 
+  - 42. Genera un listado con los comercios que tienen su sede en la misma ciudad que tiene el comercio ʻFNACʼ.      (Subconsulta).
+  ```sql
+  SELECT comercio.nombre from comercio where ciudad = (SELECT ciudad from comercio WHERE nombre = 'FNAC'  )
+  ```
+  - 43. Nombre de aquellos clientes que han registrado un producto de la misma forma que el cliente ʻPepe Pérezʼ. (Subconsulta).
+  ```sql
+  SELECT cliente.nombre from cliente, registra where registra.dni=cliente.dni 
+and registra.medio = (select registra.medio from cliente, registra where cliente.dni=registra.dni and cliente.nombre='Pepe Pérez' ) 
+  ```
+  - 44. Obtener el número de programas que hay en la tabla programas.
+  ```sql
+  SELECT count(programa.nombre) from programa
+  ```
+  - 46 Calcula el número de clientes cuya edad es mayor de 40 años.
+  ```sql
+  SELECT count(cliente.edad) from cliente where edad>40
+  ```
+  - 45. Calcula el número de productos que ha vendido el establecimiento cuyo CIF es 1.
+  ```sql
+  SELECT count(programa.codigo) from programa, distribuye, comercio where 
+programa.codigo=distribuye.codigo and distribuye.cif=comercio.cif and comercio.cif=1
+```
+  - 46. Calcula la media de programas que se venden cuyo código es 7.
+  ```sql
+  SELECT avg(distribuye.cantidad) FROM programa, distribuye 
+where programa.codigo=distribuye.codigo and programa.codigo='7'
+  ``` 
+  - 47. Calcula la mínima cantidad de programas de código 7 que se ha vendido
+  ```sql
+  SELECT min(distribuye.cantidad) FROM programa, distribuye WHERE programa.codigo=distribuye.codigo and programa.codigo='7'
+  ```
   - 48. Calcula la máxima cantidad de programas de código 7 que se ha vendido.
-  - 49. ¿En cuántos establecimientos se vende el programa cuyo código es 7? 
-  - 50. Calcular el número de registros que se han realizado por Internet.  
-  - 51. Obtener el número total de programas que se han vendido en ʻSevillaʼ. 
-  - 52. Calcular el número total de programas que han desarrollado los fabricantes cuyo país es ʻEstados Unidosʼ. 
+  ```sql
+  SELECT max(distribuye.cantidad) FROM programa, distribuye WHERE programa.codigo=distribuye.codigo and programa.codigo='7'
+  ```
+  - 49. ¿En cuántos establecimientos se vende el programa cuyo código es 7?
+  ```sql
+  select count(comercio.ciudad) from comercio, distribuye, programa 
+where comercio.cif=distribuye.cif 
+and programa.codigo=distribuye.codigo
+and programa.codigo='7'
+```
+  - 
+  - 50. Calcular el número de registros que se han realizado por Internet.
+  ```sql
+  select count(registra.medio) FROM registra WHERE medio='Internet'
+  ```
+  - 51. Obtener el número total de programas que se han vendido en ʻSevillaʼ.
+  ```sql
+  select sum(distribuye.cantidad) from distribuye, comercio 
+where comercio.cif=distribuye.cif
+and comercio.ciudad= 'Sevilla'
+```
+  - 52. Calcular el número total de programas que han desarrollado los fabricantes cuyo país es ʻEstados Unidosʼ.
+  ```sql
+  select count(programa.nombre) from programa, desarrolla, fabricante 
+WHERE programa.codigo=desarrolla.codigo
+and desarrolla.id_fab=fabricante.id_fab
+and fabricante.pais='Estados Unidos'
+```
   - 53. Visualiza el nombre de todos los clientes en mayúscula. En el resultado de la consulta debe aparecer también la longitud de la cadena nombre. 
   - 54. Con una consulta concatena los campos nombre y versión de la tabla PROGRAMA. 
 
