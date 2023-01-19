@@ -348,8 +348,16 @@ WHERE programa.codigo=desarrolla.codigo
 and desarrolla.id_fab=fabricante.id_fab
 and fabricante.pais='Estados Unidos'
 ```
-  - 53. Visualiza el nombre de todos los clientes en mayúscula. En el resultado de la consulta debe aparecer también la longitud de la cadena nombre. 
+  - 53. Visualiza el nombre de todos los clientes en mayúscula. En el resultado de la consulta debe aparecer también la longitud de la cadena nombre.
+   ```sql
+   SELECT upper(cliente.nombre), length(cliente.nombre) FROM cliente 
+   ```
+
+
   - 54. Con una consulta concatena los campos nombre y versión de la tabla PROGRAMA. 
+  ```sql
+  SELECT nombre||version from programa
+  ```
 
 
 
