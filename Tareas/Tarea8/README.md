@@ -85,15 +85,18 @@ select usuario.email from usuario where not usuario.email REGEXP 'yahoo'
 select usuario.usuario, usuario.telefono from usuario where not compañia='IUSACELL' or not compañia='TELCEL'
 ```
 20. Listar el login y teléfono de los usuarios con compañia telefónica UNEFON
-21. Listar las diferentes marcas de celular en orden alfabético descendentemente
-22. Listar las diferentes compañias en orden alfabético aleatorio
-23. Listar el login de los usuarios con nivel 0 o 2
-24. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG4
-25. Listar el login de los usuarios con nivel 1 o 3
-26. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca BLACK
-27. Listar el login de los usuarios con nivel 3
-28. Listar el login de los usuarios con nivel 0
-29. Listar el login de los usuarios con nivel 1
+```sql
+select usuario.usuario, usuario.telefono from usuario where compañia='UNEFON' 
+```
+22. Listar las diferentes marcas de celular en orden alfabético descendentemente
+23. Listar las diferentes compañias en orden alfabético aleatorio
+24. Listar el login de los usuarios con nivel 0 o 2
+25. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG4
+26. Listar el login de los usuarios con nivel 1 o 3
+27. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca BLACK
+28. Listar el login de los usuarios con nivel 3
+29. Listar el login de los usuarios con nivel 0
+30. Listar el login de los usuarios con nivel 1
 31. Contar el número de usuarios por sexo
 32. Listar el login y teléfono de los usuarios con compañia telefónica AT&T
 33. Listar las diferentes compañias en orden alfabético descendentemente
