@@ -30,7 +30,7 @@ docker run -d \
 -v mysql_data:/var/lib/mysql \
 mysql:8.0
 ```
---- INSERTAR IMAGEN 1 ---  
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins1.png"/>
 
 
 A continuación, lancé un contenedor phpMyadmind linkeado al de mysql creado anteriormente, añadiendo la etiqueta --flag -e PMA_HOST="Nombre del contenedor Mysql" 
@@ -47,11 +47,10 @@ phpmyadmin
 ```
 En este caso, como no tenía la imagen de phpmyadmin, se descargó y luego se creó el contenedor.
 
----INSERTAR IMAGEN 2---
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins2.png"/>
 
 Para comprobar que todo funcionaba correctamente, accedí al siguiente <a href= "http://localhost:8080">enlace.</a>  
-
----INSERTAR IMAGEN 3---  
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins3.png"/>  
 
 Con esto se termina el primer método.
 
@@ -64,8 +63,7 @@ Lo siguiente que realicé, fue crear una network, con el nombre que quiera.
 ```
 docker network create my-net
 ```  
-
----INSERTAR IMAGEN 4---  
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins4.png"/> 
 
 Acto seguido, creé un contenedor Docker de mysql en el que se define que debe estar en la red creada anteriormente  
 
@@ -80,9 +78,9 @@ docker run -d \
 mysql:8.0
 
 ```
----INSERTAR IMAGEN 5---
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins5.png"/>
 
-Consecuentemente, creo un contenedor Docker de phpMyadmin también en la red creada.  
+Consecuentemente, se crea un contenedor Docker de phpMyadmin también en la red creada.  
 
 ```
 docker run -d \
@@ -93,17 +91,16 @@ docker run -d \
 -p 8080:80 \
 phpmyadmin
 ```
----INSERTAR IMAGEN 6---
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins6.png"/>
 
-Por último, y al igual que anteriormente, comrpobé que todo estaba funcionando correctamente gracias al siguiente <a href= "http://localhost:8080">enlace.</a>  
+Por último, y al igual que anteriormente, comprobé que todo estaba funcionando correctamente gracias al siguiente <a href= "http://localhost:8080">enlace.</a>  
 
----INSERTAR IMAGEN 7---
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins7.png"/>
 
 ## Extra: Conectar Mariadb y PHPMyadmin.  
 
 Primero, paré los contenedores anteriormente creados.
-
----INSERTAR IMAGEN 8---  
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins8.png"/>
 
 Luego, creé un contenedor Docker de Mariadb, y uno de phoMyadmin, que mediante la flag --link, estuviera vinculado al de Mariadb  
 
@@ -124,7 +121,7 @@ docker run -d \
 -p 8080:80 \
 phpmyadmin
 ```
----INSERTAR IMAGEN 9---
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/TareaPHPmyadmin/img/ins9.png"/>
 
 Y con esto, concluyen todos los pasos.
 
