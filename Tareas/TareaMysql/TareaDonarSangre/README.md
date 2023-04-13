@@ -41,16 +41,16 @@ INSERT INTO persona VALUES(peso, admitido, sexo, fechaUltDon);
 END
 $$
 
-CALL PROCEDURE crear_persona(130, 25, 'NO', 'H', '1990-06-15 09:30:00');
-CALL PROCEDURE crear_persona(18, 56, 'SI', 'M', '2005-12-02 14:45:23');
-CALL PROCEDURE crear_persona(45, 22, 'NO', 'H', '1985-03-28 18:10:59');
-CALL PROCEDURE crear_persona(328, 37, 'NO', 'H', '1978-09-10 21:20:15');
-CALL PROCEDURE crear_persona(22, 48, 'SI', 'M', '1999-11-18 06:05:30');
-CALL PROCEDURE crear_persona(236, 29, 'NO', 'H', '1982-07-12 12:15:45');
-CALL PROCEDURE crear_persona(50, 15, 'SI', 'M', '1975-04-23 17:55:10');
-CALL PROCEDURE crear_persona(19, 42, 'NO', 'H', '2000-10-05 10:25:35');
-CALL PROCEDURE crear_persona(133, 40, 'SI', 'M', '1992-08-08 08:30:20');
-CALL PROCEDURE crear_persona(27, 58, 'SI', 'H', '2003-05-30 23:40:05');
+CALL PROCEDURE crear_persona(130, 'NO', 'H', '1990-06-15 09:30:00');
+CALL PROCEDURE crear_persona(18, 'SI', 'M', '2005-12-02 14:45:23');
+CALL PROCEDURE crear_persona(45, 'NO', 'H', '1985-03-28 18:10:59');
+CALL PROCEDURE crear_persona(328, 'NO', 'H', '1978-09-10 21:20:15');
+CALL PROCEDURE crear_persona(22, 'SI', 'M', '1999-11-18 06:05:30');
+CALL PROCEDURE crear_persona(236, 'NO', 'H', '1982-07-12 12:15:45');
+CALL PROCEDURE crear_persona(50, 'SI', 'M', '1975-04-23 17:55:10');
+CALL PROCEDURE crear_persona(19, 'NO', 'H', '2000-10-05 10:25:35');
+CALL PROCEDURE crear_persona(133,'SI', 'M', '1992-08-08 08:30:20');
+CALL PROCEDURE crear_persona(27, 'SI', 'H', '2003-05-30 23:40:05');
 
 ```
 - Realice un procedimiento para determinar si la persona puede donar sangre de acuerdo a las siguientes condiciones:
