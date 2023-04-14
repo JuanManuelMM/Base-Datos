@@ -96,4 +96,21 @@ CALL eliminar_persona('14771932V');
 
 
 - Investigar procedimientos con paramentaros de salida.
+```mysql
+DELIMITER $$
+DROP PROCEDURE IF EXISTS calcular_media$$
+CREATE PROCEDURE calcular_media(OUT media DOUBLE)
+BEGIN
+
+SET media = (SELECT avg(media) FROM persona);
+
+END
+$$
+
+DELIMITER //
+CALL calcular_media(@media)
+SELECT @media
+//
+```
+
 - Investigar cómo hacer un ciclo (while).
