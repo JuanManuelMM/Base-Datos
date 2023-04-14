@@ -54,3 +54,46 @@ CALL crear_persona('14771932V','Guzmán','Cabo','Luis',68,'H');
 CALL crear_persona('14771932V','Lucía','Martin','Luis',68,'M');
 
 ```
+
+
+Cree procedimientos para los siguientes casos:  
+- Que inserte información en la tabla clientes. Ayuda(recibe los parámetros a insertar).  
+Hecho arriba para los inserts.
+- Que actualice el nombre de un cliente. Ayuda (recibe dos parámetros, el identificador aactualizar y el nuevo nombre).  
+```mysql
+DELIMITER $$
+DROP PROCEDURE IF EXISTS editar_nombre$$
+CREATE PROCEDURE editar_nombre(IN id VARCHAR(9), IN nuevo_nombre VARCHAR(20))
+BEGIN
+
+UPDATE persona as p 
+SET nombre = nuevo_nombre
+WHERE p.id= id;
+
+
+END
+$$
+
+CALL editar_nombre('14771932V','Manolo');
+```
+
+- Que elimine un cliente. Ayuda (recibe un parámetro, identificador se va eliminar.)
+```mysql
+DELIMITER $$
+DROP PROCEDURE IF EXISTS eliminar_persona$$
+CREATE PROCEDURE eliminar_persona(IN id VARCHAR(9))
+BEGIN
+
+DELETE FROM persona as p 
+WHERE p.id= id;
+
+
+END
+$$
+
+CALL eliminar_persona('14771932V');
+```
+
+
+- Investigar procedimientos con paramentaros de salida.
+- Investigar cómo hacer un ciclo (while).
