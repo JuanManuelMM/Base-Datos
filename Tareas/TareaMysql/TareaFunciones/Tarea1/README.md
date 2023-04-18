@@ -55,6 +55,8 @@ CALL crear_persona("14187505F","Lolo",1080.0);
 Cree una función para cada punto teniendo en cuenta que:
 - Función __subsidio_transporte__: El subsidio de transporte equivale al __7%__ al salario básico.  
 ```mysql
+DELIMITER $$
+DROP FUNCTION IF EXISTS subsidio_transporte$$
 ```
 - Función __salud__: La salud que corresponde al __4%__ al salario básico.  
 ```mysql
