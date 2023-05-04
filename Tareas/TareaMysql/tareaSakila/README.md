@@ -15,7 +15,14 @@ Se pide:
 - Realiza cada una de las siguientes consultas:
     - Actores que tienen de primer nombre __Scarlett__.
     ```sql
+    mysql> select * from actor where first_name REGEXP "Scarlett";    
     ```
+    +----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|       81 | SCARLETT   | DAMON     | 2006-02-15 04:34:33 |
+|      124 | SCARLETT   | BENING    | 2006-02-15 04:34:33 |
++----------+------------+-----------+---------------------+
     - Actores que tienen de apellido __Johansson__.
     ```sql
     ```
