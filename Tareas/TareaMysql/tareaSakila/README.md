@@ -1,6 +1,6 @@
 # Tarea Sakila  
 
-### Hecho por Juan Manuel Morales Martíun 1ºDAM  
+### Hecho por Juan Manuel Morales Martín 1ºDAM  
 
 El ejercicio pide que cargemos la base de datos sakila, disponible en la web de Mysql.
 
