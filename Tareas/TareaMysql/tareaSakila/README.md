@@ -56,22 +56,31 @@ Se pide:
      *Insertar Imagen8*
     - Ciudades del country __61__.
     ```sql
+      select * from city where country_id=61;
     ```
     *Insertar Imagen9*
     - Ciudades del country __Spain__.
     ```sql
-    select * from city where country_id=61;
+    select * from country join city on city.country_id=country.country_id where country.country="Spain";
+    
     ```
+    *Insertar Imagen10*
     - Ciudades con nombres compuestos.
     ```sql
+    select * from city where city REGEXP ".-.";
     ```
+    *Insertar Imagen11*
     - Películas con una duración entre __80 y 100__.
     ```sql
+    select * from film where length between 80 and 100;
     ```
+    *La salida es muy larga*
     - Peliculas con un rental_rate entre __1 y 3__.
     ```sql
+    select * from film where rental_rate between 1 and 3;
     ```
-    - Películas con un titulo de más de __12 letras__.
+    *La salida es muy larga*
+    - Películas con un título de más de __12 letras__.
     ```sql
     ```
     - Peliculas con un rating de __PG__ o __G__.
