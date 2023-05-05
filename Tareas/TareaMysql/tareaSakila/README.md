@@ -15,40 +15,52 @@ Se pide:
 - Realiza cada una de las siguientes consultas:
     - Actores que tienen de primer nombre __Scarlett__.
     ```sql
-    mysql> select * from actor where first_name REGEXP "Scarlett";    
+    mysql> select * from actor where first_name REGEXP "Scarlett";   
     ```
-    +----------+------------+-----------+---------------------+
-| actor_id | first_name | last_name | last_update         |
-+----------+------------+-----------+---------------------+
-|       81 | SCARLETT   | DAMON     | 2006-02-15 04:34:33 |
-|      124 | SCARLETT   | BENING    | 2006-02-15 04:34:33 |
-+----------+------------+-----------+---------------------+
+    *Insertar Imagen1*
     - Actores que tienen de apellido __Johansson__.
     ```sql
+    select * from actor where last_name REGEXP "Johansson";
     ```
+    *Insertar Imagen2*
     - Actores que contengan una __O__ en su nombre.
+    
     ```sql
+    select * from actor where first_name REGEXP "o";
     ```
+    *Insertar Imagen3*
     - Actores que contengan una __O__ en su nombre y en una __A__ en su apellido.
     ```sql
-    ```
+    select * from actor where first_name REGEXP "o" and last_name REGEXP "A";
+     ```
+     *Insertar Imagen4*
     - Actores que contengan dos __O__ en su nombre y en una __A__ en su apellido.
     ```sql
+    select * from actor where first_name REGEXP "o{2}" and last_name REGEXP "A";
     ```
+    *Insertar Imagen5*
     - Actores donde su tercera letra sea __B__.
     ```sql
+    select * from actor where first_name REGEXP "^.{2}B";
     ```
+    *Insertar Imagen6*
     - Ciudades que empiezan por __a__.
     ```sql
+    select * from city where city regexp "^A";
     ```
+    *Insertar Imagen7*
     - Ciudades que acaban por __s__.
     ```sql
+    select * from city where city regexp "s$";
     ```
+     *Insertar Imagen8*
     - Ciudades del country __61__.
     ```sql
     ```
+    *Insertar Imagen9*
     - Ciudades del country __Spain__.
     ```sql
+    select * from city where country_id=61;
     ```
     - Ciudades con nombres compuestos.
     ```sql
