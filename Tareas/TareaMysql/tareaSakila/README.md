@@ -36,7 +36,7 @@ Se pide:
      *Insertar Imagen4*
     - Actores que contengan dos __O__ en su nombre y en una __A__ en su apellido.
     ```sql
-    select * from actor where first_name REGEXP "o{2}" and last_name REGEXP "A";
+    select * from actor where first_name REGEXP "o.*o.*" and last_name REGEXP "A";
     ```
     *Insertar Imagen5*
     - Actores donde su tercera letra sea __B__.
@@ -74,53 +74,83 @@ Se pide:
     ```sql
     select * from film where length between 80 and 100;
     ```
-    *La salida es muy larga*
+    *INsertar Imagen12*
     - Peliculas con un rental_rate entre __1 y 3__.
     ```sql
-    select * from film where rental_rate between 1 and 3;
+    select * from film where rental_rate between 1 and 3 limit 10;
     ```
-    *La salida es muy larga*
+    *Insertar Imagen13*
     - Películas con un título de más de __12 letras__.
     ```sql
+    select * from film where length(title)>13 limit 10;
     ```
+    *Insertar Imagen15*
     - Peliculas con un rating de __PG__ o __G__.
     ```sql
+    select * from film where rating in("PG","G") limit 10;
     ```
+    *Insertar imagen14*
     - Peliculas que no tengan un rating de __NC-17__.
     ```sql
+      select * from film where rating not in("NC-17") limit 10;
     ```
+    *Insertar imagen16*
     - Peliculas con un rating __PG__ y duracion de más de __120__.
     ```sql
+    select * from film where rating in("PG") and length > 120 limit 10;
     ```
+    *Insertar imagen17*
     - ¿Cuantos actores hay?
     ```sql
+     select count(first_name) from actor;
     ```
+    *Insertar imagen18*
     - ¿Cuántas ciudades tiene el country __Spain__?
     ```sql
+    select count(city_id) from country join city 
+      on city.country_id=country.country_id 
+      where country.country="Spain";
     ```
+    *Insertar imagen19*
     - ¿Cuántos countries hay que empiezan por __a__?
     ```sql
+    select count(country) from country where country regexp '^A';
     ```
+    *Insertar imagen20*
     - Media de duración de peliculas con __PG__.
     ```sql
+    select avg(length) from film where rating in ('PG');
     ```
+    *Insertar imagen21*
     - Suma de __rental_rate__ de todas las peliculas.
     ```sql
+    select sum(rental_rate) from film;
     ```
+    *Insertar imagen22*
     - Pelicula con mayor duración.
     ```sql
+    select * from film where length=(select max(length) from film);
     ```
+    *Insertar imagen23*
     - Película con menor duración.
     ```sql
+    select * from film where length=(select min(length) from film);
     ```
+    *Insertar imagen24*
     - Mostrar las ciudades del country __Spain__ (multitabla).
     ```sql
+    select * from country join city on city.country_id=country.country_id where country.country="Spain";
+    
     ```
+    *Insertar Imagen10, está bien, está repe*
+    
     - Mostrar el nombre de la película y el nombre de los actores.
     ```sql
     ```
+    *INsertar Imagen25*
     - Mostrar el nombre de la película y el de sus categorías.
     ```sql
+    select distinct actor.first_name, film.title from film_actor join actor on actor.actor_id=film_actor.actor_id join film on film.film_id=film_actor.film_id;
     ```
     - Mostrar el country, la ciudad y dirección de cada miembro del staff.
     ```sql
