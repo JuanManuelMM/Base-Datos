@@ -181,3 +181,9 @@ Se pide:
     select category.name, avg(film.length) from film_category join category on category.category_id=film_category.category_id join film on film.film_id=film_category.film_id group by category.category_id;
     ```
     *Insertar imagen31*
+    
+    Conociendo es estos momentos ya la __BBDD__, se pide:
+- Muestra el resultado de la consulta de las vistas que se proporcionan.
+- Crea __5__ vistas sobre la __BBDD__, y realizar la consulta, para mostrar los resultados. ___Las vistas deben de tener 3 o más tablas de la BBDD___.
+    
+    
