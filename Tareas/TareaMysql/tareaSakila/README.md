@@ -146,24 +146,38 @@ Se pide:
     
     - Mostrar el nombre de la película y el nombre de los actores.
     ```sql
-    ```
-    *INsertar Imagen25*
-    - Mostrar el nombre de la película y el de sus categorías.
-    ```sql
     select distinct actor.first_name, film.title from film_actor join actor on actor.actor_id=film_actor.actor_id join film on film.film_id=film_actor.film_id;
     ```
+    *Insertar Imagen25*
+    - Mostrar el nombre de la película y el de sus categorías.
+    ```sql
+      select distinct film.title,category.name from film_category join category on category.category_id=film_category.category_id join film on film.film_id=film_category.film_id;
+    ```
+    *Insertar imagen26*
     - Mostrar el country, la ciudad y dirección de cada miembro del staff.
     ```sql
+    select country, address, city from staff_list;
     ```
+    *Insertar imagen27*
     - Mostrar el country, la ciudad y dirección de cada customer.
     ```sql
+    select country, address, city from customer_list;
     ```
+    *Insertar imagen28*
     - Numero de películas de cada __rating__
     ```sql
+    select rating,count(rating) from film group by rating;
     ```
+    *Insertar imagen29*
     - Cuantas películas ha realizado el actor __ED CHASE__.
     ```sql
+    select actor.first_name,actor.last_name, count(film.title) from film_actor join actor on actor.actor_id=film_actor.actor_id join film on film.film_id=film_actor.film_id where actor.first_name='ED' and actor.last_name='CHASE';
+    
     ```
-    - Media de duración de las películas cada categoría.
+    *Insertar imagen30*
+  
+- Media de duración de las películas cada categoría.
     ```sql
+    select category.name, avg(film.length) from film_category join category on category.category_id=film_category.category_id join film on film.film_id=film_category.film_id group by category.category_id;
     ```
+    *Insertar imagen31*
