@@ -82,7 +82,7 @@ Se pide:
     *Insertar Imagen13*
     - Películas con un título de más de __12 letras__.
     ```sql
-    select * from film where length(title)>13 limit 10;
+    select * from film where length(title)>12 limit 10;
     ```
     *Insertar Imagen15*
     - Peliculas con un rating de __PG__ o __G__.
