@@ -17,79 +17,79 @@ Se pide:
     ```sql
     mysql> select * from actor where first_name REGEXP "Scarlett";   
     ```
-    *Insertar Imagen1*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen1.png">
     - Actores que tienen de apellido __Johansson__.
     ```sql
     select * from actor where last_name REGEXP "Johansson";
     ```
-    *Insertar Imagen2*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen2.png">
     - Actores que contengan una __O__ en su nombre.
     
     ```sql
     select * from actor where first_name REGEXP "o";
     ```
-    *Insertar Imagen3*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen3.png">
     - Actores que contengan una __O__ en su nombre y en una __A__ en su apellido.
     ```sql
     select * from actor where first_name REGEXP "o" and last_name REGEXP "A";
      ```
-     *Insertar Imagen4*
+     <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen4.png">
     - Actores que contengan dos __O__ en su nombre y en una __A__ en su apellido.
     ```sql
     select * from actor where first_name REGEXP "o.*o.*" and last_name REGEXP "A";
     ```
-    *Insertar Imagen5*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen5.png">
     - Actores donde su tercera letra sea __B__.
     ```sql
     select * from actor where first_name REGEXP "^.{2}B";
     ```
-    *Insertar Imagen6*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen6.png">
     - Ciudades que empiezan por __a__.
     ```sql
     select * from city where city regexp "^A";
     ```
-    *Insertar Imagen7*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen7.png">
     - Ciudades que acaban por __s__.
     ```sql
     select * from city where city regexp "s$";
     ```
-     *Insertar Imagen8*
+     <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen8.png">
     - Ciudades del country __61__.
     ```sql
       select * from city where country_id=61;
     ```
-    *Insertar Imagen9*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen9.png">
     - Ciudades del country __Spain__.
     ```sql
     select * from country join city on city.country_id=country.country_id where country.country="Spain";
     
     ```
-    *Insertar Imagen10*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen10.png">
     - Ciudades con nombres compuestos.
     ```sql
     select * from city where city REGEXP ".-.";
     ```
-    *Insertar Imagen11*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen11.png">
     - Películas con una duración entre __80 y 100__.
     ```sql
     select * from film where length between 80 and 100;
     ```
-    *INsertar Imagen12*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen12.png">
     - Peliculas con un rental_rate entre __1 y 3__.
     ```sql
     select * from film where rental_rate between 1 and 3 limit 10;
     ```
-    *Insertar Imagen13*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen13.png">
     - Películas con un título de más de __12 letras__.
     ```sql
     select * from film where length(title)>12 limit 10;
     ```
-    *Insertar Imagen15*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen15.png">
     - Peliculas con un rating de __PG__ o __G__.
     ```sql
     select * from film where rating in("PG","G") limit 10;
     ```
-    *Insertar imagen14*
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen14.png">
     - Peliculas que no tengan un rating de __NC-17__.
     ```sql
       select * from film where rating not in("NC-17") limit 10;
