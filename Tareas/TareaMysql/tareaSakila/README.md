@@ -109,93 +109,110 @@ Se pide:
     ```sql
       select * from film where rating not in("NC-17") limit 10;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen16.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen16.png">  
+    
     - Peliculas con un rating __PG__ y duracion de más de __120__.
     ```sql
     select * from film where rating in("PG") and length > 120 limit 10;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen17.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen17.png">  
+    
     - ¿Cuantos actores hay?
     ```sql
      select count(first_name) from actor;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen18.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen18.png">  
+    
     - ¿Cuántas ciudades tiene el country __Spain__?
     ```sql
     select count(city_id) from country join city 
       on city.country_id=country.country_id 
       where country.country="Spain";
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen19.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen19.png">  
+    
     - ¿Cuántos countries hay que empiezan por __a__?
     ```sql
     select count(country) from country where country regexp '^A';
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen20.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen20.png">  
+    
     - Media de duración de peliculas con __PG__.
     ```sql
     select avg(length) from film where rating in ('PG');
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen21.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen21.png">  
+    
     - Suma de __rental_rate__ de todas las peliculas.
     ```sql
     select sum(rental_rate) from film;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen22.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen22.png">  
+    
     - Pelicula con mayor duración.
     ```sql
     select * from film where length=(select max(length) from film);
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen23.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen23.png">  
+    
     - Película con menor duración.
     ```sql
     select * from film where length=(select min(length) from film);
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen24.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen24.png">  
+    
     - Mostrar las ciudades del country __Spain__ (multitabla).
     ```sql
     select * from country join city on city.country_id=country.country_id where country.country="Spain";
     
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen10.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen10.png">  
+    
     
     - Mostrar el nombre de la película y el nombre de los actores.
     ```sql
     select distinct actor.first_name, film.title from film_actor join actor on actor.actor_id=film_actor.actor_id join film on film.film_id=film_actor.film_id;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen25.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen25.png">  
+    
     - Mostrar el nombre de la película y el de sus categorías.
     ```sql
       select distinct film.title,category.name from film_category join category on category.category_id=film_category.category_id join film on film.film_id=film_category.film_id;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen26.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen26.png">  
+    
     - Mostrar el country, la ciudad y dirección de cada miembro del staff.
     ```sql
     select country, address, city from staff_list;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen27.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen27.png">  
+    
     - Mostrar el country, la ciudad y dirección de cada customer.
     ```sql
     select country, address, city from customer_list;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen28.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen28.png">  
+    
     - Numero de películas de cada __rating__
     ```sql
     select rating,count(rating) from film group by rating;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen29.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen29.png">  
+    
     - Cuantas películas ha realizado el actor __ED CHASE__.
     ```sql
     select actor.first_name,actor.last_name, count(film.title) from film_actor join actor on actor.actor_id=film_actor.actor_id join film on film.film_id=film_actor.film_id where actor.first_name='ED' and actor.last_name='CHASE';
     
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen30.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen30.png">  
+    
   
-- Media de duración de las películas cada categoría.
+    - Media de duración de las películas cada categoría.
     ```sql
     select category.name, avg(film.length) from film_category join category on category.category_id=film_category.category_id join film on film.film_id=film_category.film_id group by category.category_id;
     ```
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen31.png">
+    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/tareaSakila/images/imagen31.png">  
+    
     
     Conociendo es estos momentos ya la __BBDD__, se pide:
 - Muestra el resultado de la consulta de las vistas que se proporcionan.
