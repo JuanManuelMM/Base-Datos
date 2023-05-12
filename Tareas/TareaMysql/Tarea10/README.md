@@ -70,6 +70,52 @@ Se pide:
     >__Nota__:_Muestra el comando y la salida_.
 
     ```sql
+    DELIMITER $$
+
+DROP PROCEDURE IF EXISTS clientes_aleatorios$$
+CREATE PROCEDURE clientes_aleatorios(IN numRegistros INT)
+BEGIN
+
+DECLARE ultimo int;
+DECLARE contadorRegistros INT;
+DECLARE nombreArchivo VARCHAR(20);
+Declare telefono integer;
+Declare domicilio varchar(100);
+Declare ciudad varchar(100);
+Declare provincia varchar(100);
+Declare nombreCliente varchar(8);
+set ultimo = (select count(*) from cliente);
+
+while(contadorRegistros <= numRegistros)
+do
+set nombreCliente = concat("Pepe ",(contadorRegistros + ultimo));
+set nombreArchivo = concat("Archivo ",(contadorRegistros + ultimo));
+set domicilio = concat("Domicilio ",(contadorRegistros + ultimo));
+set ciudad = concat("Ciudad ",(contadorRegistros + ultimo));
+set provincia = concat("Provincia ",(contadorRegistros + ultimo));
+
+set telefono = (select round( rand()*(600000000-699999999) +600000000));
+
+
+insert into cliente values(
+	nombreArchivo,
+	nombreCliente,
+    domicilio,
+    ciudad,
+    provincia,
+    telefono
+);
+
+set contadorRegistros = contadorRegistros+1;
+end while;
+
+END
+$$
+
+delimiter ;
+
+call clientes_aleatorios(5);
+call clientes_aleatorios(5);
     ```  
     
     <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/Tarea10/img/img5.png"/>
