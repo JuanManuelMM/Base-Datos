@@ -21,8 +21,7 @@ Se pide:
     ```sql
     drop table if exists cliente;
     ```
-    
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/Tarea10/img/img1.png"/>
+ <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/Tarea10/img/img1.png"/>
 
 
 
@@ -31,7 +30,7 @@ Se pide:
     
     ```sql
     create table cliente( 
-        documento char(8) not null, 
+        documento varchar(80) not null, 
         nombre varchar(30) not null, 
         domicilio varchar(30), 
         ciudad varchar(20), 
@@ -69,7 +68,7 @@ Se pide:
 - Genera un procedimiento que realice la inserción de 5 registros, al menos 2 veces, de forma aleatoria.
     >__Nota__:_Muestra el comando y la salida_.
 
-    ```sql
+```sql
     DELIMITER $$
 
 DROP PROCEDURE IF EXISTS clientes_aleatorios$$
@@ -85,6 +84,7 @@ Declare ciudad varchar(100);
 Declare provincia varchar(100);
 Declare nombreCliente varchar(8);
 set ultimo = (select count(*) from cliente);
+set contadorRegistros = 1;
 
 while(contadorRegistros <= numRegistros)
 do
@@ -116,9 +116,9 @@ delimiter ;
 
 call clientes_aleatorios(5);
 call clientes_aleatorios(5);
-    ```  
+```  
     
-    <img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/Tarea10/img/img5.png"/>
+<img src="https://github.com/JuanManuelMM/Base-Datos/blob/main/Tareas/TareaMysql/Tarea10/img/img5.png"/>
       
 - Agregue un índice único por el campo "telefono".
     >__Nota__:_Muestra el comando y la salida_.
